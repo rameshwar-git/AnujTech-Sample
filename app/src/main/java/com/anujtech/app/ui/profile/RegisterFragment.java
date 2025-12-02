@@ -29,6 +29,7 @@ public class RegisterFragment extends Fragment {
 
 
     EditText mname, mdob, memail, mphone, maddress, mpassword;
+    String mtype;
     Button msubmit, mback;
     FirebaseAuth mauth;
     ProgressBar progressBar;
@@ -90,7 +91,14 @@ public class RegisterFragment extends Fragment {
                         assert firebaseUser != null;
                         String uid = firebaseUser.getUid();
 
-                        RegDataModel regDataModel = new RegDataModel( mname.getText().toString(), mdob.getText().toString(), memail.getText().toString(), mphone.getText().toString(), maddress.getText().toString() );
+                        RegDataModel regDataModel = new RegDataModel(
+                                mname.getText().toString(),
+                                mdob.getText().toString(),
+                                memail.getText().toString(),
+                                mphone.getText().toString(),
+                                maddress.getText().toString(),
+                                mtype="User"
+                        );
 
                         databaseReference.child( uid ).setValue( regDataModel ).addOnFailureListener( new OnFailureListener() {
                             @Override

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "507933204192",
+    "firebase_url": "https://dev-x-ai-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "dev-x-ai",
     "storage_bucket": "dev-x-ai.firebasestorage.app"
   },

@@ -8,8 +8,8 @@ import android.provider.OpenableColumns;
 import java.util.Objects;
 
 public class FileName {
-    Context mContex;
-    Uri uri;
+    private Context mContex;
+    private Uri uri;
 
     public FileName() {
     }

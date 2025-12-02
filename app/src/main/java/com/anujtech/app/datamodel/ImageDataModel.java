@@ -3,12 +3,12 @@ package com.anujtech.app.datamodel;
 public class ImageDataModel {
     public ImageDataModel() {
     }
-    public String filename,imageUri;
-    public String imageUrl;
-    public String mob1;
-    public String mob2;
-    public String mDate;
-    public String mTimeStamp;
+    private String filename,imageUri;
+    private String imageUrl;
+    private String mob1;
+    private String mob2;
+    private String mDate;
+    private String mTimeStamp;
 
     public ImageDataModel(String filename, String imageUrl,String mob1, String mob2, String mDate, String mTimeStamp) {
         this.filename = filename;

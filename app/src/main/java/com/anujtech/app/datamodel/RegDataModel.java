@@ -4,15 +4,17 @@ public class RegDataModel {
     public RegDataModel() {
     }
 
-    String name, dob, email, mobile, address;
+    private String name, dob, email, mobile, address, type;
 
 
-    public RegDataModel(String name, String dob, String email, String mobile, String address) {
+    public RegDataModel(String name, String dob, String email, String mobile, String address, String type) {
         this.name = name;
         this.dob = dob;
         this.email = email;
         this.mobile = mobile;
         this.address = address;
+        this.type = type;
+
     }
 
     public String getName() {
@@ -53,5 +55,13 @@ public class RegDataModel {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

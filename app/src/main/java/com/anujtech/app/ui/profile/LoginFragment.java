@@ -15,11 +15,18 @@ import androidx.fragment.app.Fragment;
 
 import com.anujtech.app.R;
 import com.anujtech.app.adminpages.Adminpage;
+import com.anujtech.app.datamodel.RegDataModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.UserInfo;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginFragment extends Fragment {
 
@@ -71,15 +78,36 @@ public class LoginFragment extends Fragment {
         FirebaseAuth.getInstance().signInWithEmailAndPassword( email, pass ).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
                         if (task.isSuccessful()) {
-                            if (FirebaseAuth.getInstance().getUid().equals("dPhFN0GuiWNg0JCVxkskKWZO69Y2")) {
-                                Intent intent = new Intent( getActivity(), Adminpage.class );
-                                startActivity( intent );
-                            } else {
-                                getFragmentManager().beginTransaction().replace( R.id.fragment_login, new ProfileFragment() ).commit();
+                            try {
+                                boolean statusok = !FirebaseAuth.getInstance().getUid().isEmpty();
+                                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                                DatabaseReference databaseReference = firebaseDatabase.getReference().child("User Info").child(FirebaseAuth.getInstance().getUid());
+                                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        RegDataModel userInfo = snapshot.getValue(RegDataModel.class);
+                                        assert userInfo != null;
+                                        String type = userInfo.getType();
+                                        //for admin login
+                                        if (statusok && type.equals("admin")) {
+                                            Intent intent = new Intent(getActivity(), Adminpage.class);
+                                            startActivity(intent);
+                                        } else {
+                                            getFragmentManager().beginTransaction().replace(R.id.fragment_login, new ProfileFragment()).commit();
+                                        }
+                                        Toast.makeText(getActivity(), "Login Sucessfull.", Toast.LENGTH_SHORT).show();
+
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+                            } catch (Exception e){
+                                Toast.makeText( getActivity(), e.getMessage(), Toast.LENGTH_LONG ).show();
                             }
-                            Toast.makeText( getActivity(), "Login Sucessfull.", Toast.LENGTH_SHORT ).show();
                         } else {
                             Toast.makeText( getActivity(), task.getException().toString(), Toast.LENGTH_LONG ).show();
                         }
