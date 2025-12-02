@@ -1,3 +1,18 @@
+# Requirements
+---
+- **Android Studio**
+- **Java 17+**
+- **Firebase**
+- **Emulator**
+
+## Setup
+- Open Android Studio Goto Tools -> Firebase -> Realtime Database -> Get started with Realtime Database
+- Complete the process to setup Backend in Firebase.
+
+## Build
+- Build and Run the application in android studio
+
+
 # JobAdda
 
 JobAdda is a platform designed to connect businesses with job seekers. Companies can effortlessly post job vacancies, and job seekers can easily browse and apply for open positions—all in one streamlined interface.
@@ -30,12 +45,12 @@ JobAdda is a platform designed to connect businesses with job seekers. Companies
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/rameshwar-git/JobAdda.git
+   git clone https://github.com/rameshwar-git/AnujTech-Sample.git
    ```
 
 2. **Navigate to the project directory**
    ```bash
-   cd JobAdda
+   cd AnujTech
    ```
 
 3. **Compile the Java source code**
@@ -63,11 +78,6 @@ JobAdda is a platform designed to connect businesses with job seekers. Companies
 Contributions are welcome!  
 Please fork this repository and submit a pull request with any feature suggestions or bug fixes.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
