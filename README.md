@@ -12,6 +12,20 @@
 ## Build
 - Build and Run the application in android studio
 
+## Use
+- Open App Goto -> About -> Profile -> Signup to Register
+- After Registration -> Enter "Email" and "Password" to login.
+
+## Admin 
+- Open Realtime Database
+- Goto User Registration Schema
+- Select User to give admin permission
+- Change object data from "User" -> "admin".
+- Return to Login Screen and Login again to access admin panel.
+
+### Schema 
+- Realtime DataBase
+    ![Schema](https://github.com/rameshwar-git/AnujTech-Sample.git/assets/images/Schema.png?raw=true)
 
 # JobAdda
 
