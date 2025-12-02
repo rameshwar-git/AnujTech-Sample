@@ -24,7 +24,7 @@
 - Return to Login Screen and Login again to access admin panel.
 
 ### Schema 
-    - Realtime DataBase
+Realtime DataBase
 
     ![Schema](./assets/images/Schema.png?raw=true)
 
