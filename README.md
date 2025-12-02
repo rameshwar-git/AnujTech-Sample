@@ -28,9 +28,9 @@
 
     ![Schema](./assets/images/Schema.png?raw=true)
 
-# JobAdda
+# AnujTech
 
-JobAdda is a platform designed to connect businesses with job seekers. Companies can effortlessly post job vacancies, and job seekers can easily browse and apply for open positions—all in one streamlined interface.
+AnujTech is a platform designed to connect businesses with job seekers. Companies can effortlessly post job vacancies, and job seekers can easily browse and apply for open positions—all in one streamlined interface.
 
 ---
 
@@ -84,7 +84,7 @@ JobAdda is a platform designed to connect businesses with job seekers. Companies
 ## 💡 Usage
 
 - **Businesses:** Register or log in and post job vacancies.
-- **Job Seekers:** Browse available job postings and apply directly through JobAdda.
+- **Job Seekers:** Browse available job postings and apply directly through AnujTech.
 
 ---
 
