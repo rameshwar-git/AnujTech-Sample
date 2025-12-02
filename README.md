@@ -25,7 +25,7 @@
 
 ### Schema 
 - Realtime DataBase
-    ![Schema](https://github.com/rameshwar-git/AnujTech-Sample.git/assets/images/Schema.png?raw=true)
+    ![Schema](./assets/images/Schema.png?raw=true)
 
 # JobAdda
 
