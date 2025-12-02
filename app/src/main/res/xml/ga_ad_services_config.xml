@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  Your ad services configuration here. For example:  -->
+    <property
+        android:name="allow_personalized_ads"
+        android:value="true" />
+</ad-services-config>

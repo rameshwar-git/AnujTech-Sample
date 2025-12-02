@@ -1,0 +1,7 @@
+/build
+.gradle
+.idea
+/app/build
+/app/debug
+/app/release
+/app/google-services

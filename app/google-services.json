@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "507933204192",
+    "project_id": "dev-x-ai",
+    "storage_bucket": "dev-x-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507933204192:android:957261eb9c2840c0973a85",
+        "android_client_info": {
+          "package_name": "com.anujtech.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdB0GZ_I6mED1Fi3YccWiU3ljBknZqm5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
